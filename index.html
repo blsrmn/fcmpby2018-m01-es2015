@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="get-sources.js">
+    </script>
 </head>
-<body>
+<body onload="getSources('https://newsapi.org/v1/sources');">
   <h1>Sources</h1>
   <ul id="sources"></ul>
 </body>
-<script src="get-sources.js"></script>
 </html>

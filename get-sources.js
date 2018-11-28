@@ -1,7 +1,3 @@
-const ul = document.getElementById('sources');
-const url = 'https://newsapi.org/v1/sources';
-getSources(url);
-
 function createNode(element) {
     return document.createElement(element);
 }
@@ -11,6 +7,7 @@ function append(parent, el) {
 }
 
 function getSources(url) {
+    const ul = document.getElementById('sources');
     let response = fetch(url)
         .then(resp => resp.json())
         .then(data => {
