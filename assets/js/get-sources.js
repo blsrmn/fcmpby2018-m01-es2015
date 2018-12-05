@@ -16,16 +16,11 @@ let getSources = (url) => {
             let sources = data.sources;
             return sources.map(source => {
                 let li = createNode('li'),
-                    span = createNode('span'),
-                    getNewsSpan = createNode('span');
-                getNewsSpan.onclick = () => { return getNews(`${source.id}`); }
-                span.innerHTML = `${source.name}`;
-                //id.innerHTML = `${source.id}`;
-                //id.style = 'display:none;';
-                //append(li, span);
-                //append(li, id);
-                append(li, getNewsSpan);
-                append(getNewsSpan, span);
+                    a = createNode('a');
+                a.innerHTML = `${source.name}`;
+                a.href = "#"
+                a.onclick = () => { return getNews(`${source.id}`); }
+                append(li, a);
                 append(ul, li);
             });
         })
